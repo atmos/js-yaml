@@ -212,7 +212,7 @@ describe 'yaml'
       end
     end
 
-    describe 'with nested hash'
+    describe 'with a nested hash'
       it 'should work'
         assert('hash.hash', { pets: { niko: 2, simon: 14 }, birthMonths: { niko: "May", simon: "June" }})
       end
@@ -222,6 +222,12 @@ describe 'yaml'
   describe 'documents'
     it 'should work'
       assert('document', [1,2,3])
+    end
+  end
+
+  describe 'escaped strings'
+    it 'should work'
+      assert('escaped.strings', { cinderella: '<a href="http://flickr.com/photos/atmos/tags/cinderella">cinderella</a>' });
     end
   end
 
